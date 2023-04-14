@@ -1,0 +1,292 @@
+html {
+  position: relative;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+html::before {
+  content: '';
+  background: url('../images/background_galaxy.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.logo {
+  position: relative;
+  background: url('../images/space_logo.png') no-repeat center center fixed;
+  width: 100%;
+  height: 30rem;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+}
+
+.logo > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 10px 10px 10px #000000;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-name: spaceInLeft;
+}
+
+nav {
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 15px 0 15px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+/*Navbar top*/
+nav > div {
+  background-color: #d2dae7;
+  color: #ffffff;
+  border-top-right-radius: 5rem;
+  border-top-left-radius: 5rem;
+  height: 3.5rem;
+  display: flex;
+  padding: 0.4rem;
+}
+
+nav > div > ul {
+  margin: 0 auto;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav > div > ul > a:hover {
+  background-color: #ffffff;
+  color: #3d393b;
+}
+
+nav > div > ul > a {
+  color: #ffffff;
+  text-transform: uppercase;
+  border: #ffffff 1px solid;
+  padding: 1rem 1rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  list-style: none;
+  margin: 0rem 0.1rem;
+  font-weight: 900;
+}
+
+/*End of Navbar top*/
+
+/*Astronaut */
+.astronaut {
+  position: absolute;
+  width: 22%;
+  height: 397%;
+  top: -28%;
+  right: 0%;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-name: spaceInLeft;
+  z-index: 999;
+}
+/*End of Astronaut*/
+
+.content {
+  position: relative;
+  margin: 0 15px 0 15px;
+  padding: 0 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  border-left: #ffffff 1px solid;
+  border-right: #ffffff 1px solid;
+  border-bottom: #ffffff 1px solid;
+  border-radius: 0 0 4rem 4rem;
+}
+
+/*Home*/
+.home {
+  width: 80%;
+}
+.home::after {
+  background: url('../images/leaf.jpg') no-repeat center center scroll;
+  background-size: cover;
+  content: '';
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  border-radius: 0 0 4rem 4rem;
+}
+/*End of Home*/
+
+/* Video */
+
+.video > div > div {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+/*End of Video*/
+
+/*Gallery*/
+.table {
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cell {
+  flex: 1;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.gallery-img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.image-description {
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  left: 25%;
+  display: none;
+  font-weight: 500;
+  color: #ffff;
+}
+
+/*End of Gallery*/
+
+/*Reservation*/
+
+.reservation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation,
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation,
+form > input {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #3d393b;
+  font-weight: 900;
+}
+
+/*End of Reservation*/
+
+/*footer*/
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  height: 3.5rem;
+  padding: 0.4rem;
+}
+/*End of footer*/
+
+/*animations*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+    border-radius: 1rem;
+  }
+  20% {
+    border-radius: 3rem;
+  }
+  50% {
+    opacity: 0.3;
+    border-radius: 5rem;
+  }
+  70% {
+    border-radius: 7rem;
+  }
+  100% {
+    opacity: 0.6;
+    border-radius: 10rem;
+  }
+}
+
+@keyframes spaceInLeft {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 50%;
+    transform: scale(0.2) translate(-200%, 0%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 50%;
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+
+@keyframes spaceInLeft {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 50%;
+    transform: scale(0.2) translate(-200%, 0%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 50%;
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+/*End of animations*/
